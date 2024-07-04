@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VINCENT WAMANGA MINISTRIES INTERNATIONAL (VWMI)
+    </title>
+</head>
+<link rel="stylesheet" href="./style.css">
+
+<style>
+
+.Logo{
+    position: relative;
+    align-self: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    border-radius: 10px;
+}
+
+.HomeHeader{
+    height: 100px;
+    display: block;
+}
+
+.Names{
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 30px;
+    color: white;
+}
+
+.AppName{
+    position: relative;
+    font-size: 16px;
+    text-align: center;
+    color: white;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.HomeSubHeader{
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    background: transparent;
+    display: inline-flex;
+    bottom: 0;
+}
+
+.holder{
+    position: absolute;
+    width:100% ;
+    height: auto;
+    top: 100px;
+    bottom: 0;
+    background: mediumorchid;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.ImagesHolder{
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background: purple;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: inline-flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.ImagesOfChurch{
+    position: relative;
+    width: 80%;
+    height: 95%;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    flex-shrink: 0;
+}
+
+</style>
+<body>
+
+    <header class="HomeHeader" >
+
+        <h1 class='AppName'>VINCENT WAMANGA MINISTRIES INTERNATIONAL (VWMI)</h1>
+    
+        <div class="HomeSubHeader">
+
+            <p onclick='Services()' class='Sections'>Services</p>
+    
+            <p onclick='Donate()' class='Sections'>Donate</p>
+        
+            <p onclick='AboutUs()' class='Sections'>About Us</p>
+            
+            <p onclick='ContactUS()' class='Sections'>Contact Us</p>
+        
+        </div>
+
+    </header>
+
+    <div class="holder">
+
+        <img class="Logo" src="/database/logo.jpeg" >
+
+        <h1>VINCENT WAMANGA MINISTRIES INTERNATIONAL (VWMI)</h1>
+
+        <p style="padding: 5%;text-align: center;">
+
+            We are a worldwide revival ministry mandated by God to preach the end time message of the gospel of the kingdom of God to whole world .prepare nations to be ready for ready for the glorious rapture, by conducting worldwide miracle healing services, monthly revival crusades, conferences and seminars, prayer summits in stadiums and fields in major cities and towns, worldwide. And also planting churches and helping the needy and poor people worldwide as it was mandated by God through his servant.  By all means, we will Go to the whole world and preach the divine gospel of our lord Jesus Christ to all mankind, pray for the sick as it is mandated in the Holy Scriptures Mathew 10:8.   
+
+        </p>
+
+        <button style="background: forestgreen;">Church Service @ 9am</button>
+
+        <p style="text-align: center;">Church Service at The Ministry</p>
+
+        <div class="ImagesHolder">
+
+            <img class="ImagesOfChurch" src="/database/WhatsApp Image 2024-07-02 at 10.31.20.jpeg" >
+
+            <img class="ImagesOfChurch" src="/database/WhatsApp Image 2024-07-02 at 10.31.50.jpeg" >
+
+            <img class="ImagesOfChurch" src="/database/WhatsApp Image 2024-07-02 at 10.38.17.jpeg" >
+
+        </div>
+
+    </div>
+        
+</body>
+
+    <script>
+
+        ContactUS=()=>{
+            location='/ContactUs.html';
+        }
+
+        Donate=()=>{
+            location='/Donate.html'; 
+        }
+
+        AboutUs=()=>{
+            location='/AboutUs.html'; 
+        }
+
+        Services=()=>{
+            location='/Services.html'; 
+        }
+
+    </script>
+
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VINCENT WAMANGA MINISTRIES INTERNATIONAL (VWMI)
+    </title>
+</head>
+<link rel="stylesheet" href="./style.css">
+
+<style>
+
+.Logo{
+    position: relative;
+    align-items: center;
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+}
+
+.HomeHeader{
+    height: 100px;
+    display: block;
+}
+
+.Names{
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 30px;
+    color: white;
+}
+
+.AppName{
+    position: relative;
+    font-size: 16px;
+    text-align: center;
+    color: white;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.HomeSubHeader{
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    background: transparent;
+    display: inline-flex;
+    bottom: 0;
+}
+
+.holder{
+    position: absolute;
+    width:100% ;
+    height: auto;
+    top: 100px;
+    bottom: 0;
+    background: mediumorchid;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+</style>
+<body>
+
+    <header class="HomeHeader" >
+
+        <h1 class='AppName'>VINCENT WAMANGA MINISTRIES INTERNATIONAL (VWMI)</h1>
+    
+        <div class="HomeSubHeader">
+
+            <p onclick='Home()' class='Sections'>Home</p>
+        
+            <p onclick='Place()' class='Sections'>Location</p>
+            
+            <p onclick='SocialMedia()' class='Sections'>Social-Media</p>
+        
+        </div>
+
+    </header>
+
+    <div class="holder">
+
+        <h1>Send Us A Direct Message</h1>
+
+        <input type="text" placeholder="Enter Your Name">
+
+        <input type="email" placeholder="Enter Your Email">
+
+        <input type="text" placeholder="Enter Your Subject">
+
+        <textarea placeholder="Compose Your Message"></textarea>
+
+        <button style="background: forestgreen;">Send</button>
+
+    </div>
+        
+</body>
+
+    <script>
+
+        Home=()=>{
+            location='/index.html';
+        }
+
+        Place=()=>{
+            location='/Location.html'; 
+        }
+
+        SocialMedia=()=>{
+
+            location='/SocialMedia.html'; 
+
+        }
+
+    </script>
+
+</html>

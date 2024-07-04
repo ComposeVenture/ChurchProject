@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VINCENT WAMANGA MINISTRIES INTERNATIONAL (VWMI)
+    </title>
+</head>
+<link rel="stylesheet" href="./style.css">
+<script src="/functions.js"></script>
+
+<style>
+
+.Logo{
+    position: relative;
+    align-items: center;
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+}
+
+.HomeHeader{
+    height: 100px;
+    display: block;
+}
+
+.Names{
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 30px;
+    color: white;
+}
+
+.AppName{
+    position: relative;
+    font-size: 16px;
+    text-align: center;
+    color: white;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.HomeSubHeader{
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    background: transparent;
+    display: inline-flex;
+    bottom: 0;
+}
+
+.holder{
+    position: absolute;
+    width:100% ;
+    height: auto;
+    top: 100px;
+    bottom: 0;
+    background: mediumorchid;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.Icons{
+    width: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: 0.5rem;
+}
+
+</style>
+<body>
+
+    <header class="HomeHeader" >
+
+        <h1 class='AppName'>VINCENT WAMANGA MINISTRIES INTERNATIONAL (VWMI)</h1>
+    
+        <div class="HomeSubHeader">
+
+            <p onclick='Home()' class='Sections'>Home</p>
+                    
+            <p  onclick="RequestPrayer()" class='Sections'>Prayer Request</p>
+        
+        </div>
+
+    </header>
+
+    <div class="holder">
+
+        <h1 style="text-align: center;">ENGAGE MORE WITH US </h1>
+
+        <button style="background: forestgreen;display: inline-flex;">
+
+            <p style="margin-left: 0.5rem;"  class='Sections' >Facebook</p>
+
+            <img class="Icons" src="/database/facebook.png">
+
+        </button>
+
+        <button style="background: forestgreen;display: inline-flex;">
+
+            <p style="margin-left: 0.5rem;"  class='Sections' >Instagram</p>
+
+            <img class="Icons" src="/database/instagram.png">
+
+        </button>
+
+        <button style="background: forestgreen;display: inline-flex;">
+
+            <p style="margin-left: 0.5rem;"  class='Sections' >LinkedIn</p>
+
+            <img class="Icons" src="/database/instagram.png">
+
+        </button>
+
+        <button style="background: forestgreen;display: inline-flex;">
+
+            <p style="margin-left: 0.5rem;"  class='Sections' >X</p>
+
+            <img class="Icons" src="/database/close.png">
+
+        </button>
+
+        <button style="background: forestgreen;display: inline-flex;">
+
+            <p style="margin-left: 0.5rem;"  class='Sections' >You Tube</p>
+
+            <img class="Icons" src="/database/close.png">
+
+        </button>
+
+        <button style="background: forestgreen;display: inline-flex;">
+
+            <p style="margin-left: 0.5rem;"  class='Sections' >Pinterest</p>
+
+            <img class="Icons" src="/database/close.png">
+
+        </button>
+
+    </div>
+        
+</body>
+
+    <script>
+
+        Home=()=>{
+            location='/ContactUs.html';
+        }
+
+        RequestPrayer=()=>{
+
+            location='/PrayerRequest.html';
+
+        }
+
+    </script>
+
+</html>
