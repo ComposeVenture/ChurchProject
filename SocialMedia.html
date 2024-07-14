@@ -81,6 +81,10 @@
             <p onclick='Home()' class='Sections'>Home</p>
                     
             <p  onclick="RequestPrayer()" class='Sections'>Prayer Request</p>
+
+            <p  onclick="testify()" class='Sections'>Testify</p>
+
+            <p  onclick="ReportGiving()" class='Sections'>Thanks Giving Report</p>
         
         </div>
 
@@ -108,14 +112,6 @@
 
         <button style="background: forestgreen;display: inline-flex;">
 
-            <p style="margin-left: 0.5rem;"  class='Sections' >LinkedIn</p>
-
-            <img class="Icons" src="./database/instagram.png">
-
-        </button>
-
-        <button style="background: forestgreen;display: inline-flex;">
-
             <p style="margin-left: 0.5rem;"  class='Sections' >X</p>
 
             <img class="Icons" src="./database/close.png">
@@ -126,15 +122,7 @@
 
             <p style="margin-left: 0.5rem;"  class='Sections' >You Tube</p>
 
-            <img class="Icons" src="./database/close.png">
-
-        </button>
-
-        <button style="background: forestgreen;display: inline-flex;">
-
-            <p style="margin-left: 0.5rem;"  class='Sections' >Pinterest</p>
-
-            <img class="Icons" src="./database/close.png">
+            <img class="Icons" src="./database/play.png">
 
         </button>
 
@@ -152,6 +140,17 @@
 
             location='./PrayerRequest.html';
 
+        }
+
+        testify=()=>{
+
+            location='./Testify.html';
+
+        }
+
+        ReportGiving=()=>{
+
+            location='./ReportGiving.html';
         }
 
     </script>
