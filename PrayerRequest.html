@@ -96,7 +96,7 @@
 
         <textarea placeholder="Compose Your Message"></textarea>
 
-        <button style="background: forestgreen;">Request</button>
+        <button onclick="SendEmail()" style="background: forestgreen;">Request</button>
 
     </div>
         
@@ -106,6 +106,61 @@
 
         Home=()=>{
             location='./SocialMedia.html';
+        }
+
+        SendEmail=()=>{
+
+            const UserName=document.querySelector('#UserName');
+            const UserEmail=document.querySelector('#UserEmail');
+            const UserSubject=document.querySelector('#UserSubject');
+            const UserBody=document.querySelector('#UserBody');
+
+            if (UserName.value ) {
+                
+                if (UserEmail.value ) {
+                    
+                    if (UserSubject.value ) {
+                    
+                        if (UserBody.value ) {
+
+                            const DATA={
+                                "recipientEmail":Email,
+                                "Subject":UserSubject.value,
+                                "body":`Dear VINCENT WAMANGA MINISTRIES INTERNATIONAL (VWMI) \n You Have a Direct Message From ${UserName.value} and there Message is ${UserBody.value}.\n If your Interested in the Response Back to that Person Please Send Them a Email Via ${UserEmail.value}.\n Thank You For USing Compose Ventures Company Services .In Case of Any Inquires Please Respond Back to Us via This Email.\n Thank You. \n From Compose Email Team.`
+                            }
+
+                            POSTPACKAGE(EMAILAPI,'',DATA,(data)=>{
+
+                                console.log(data)
+
+                            })
+
+                        } else {
+                            
+                            alert('Enter Your Message');
+
+                        }
+
+                    } else {
+                        
+                        alert('Enter Your Subject');
+
+                    }
+
+
+                } else {
+                    
+                    alert('Enter User Email');
+
+                }
+
+
+            } else {
+                
+                alert('Enter User Name');
+
+            }
+
         }
 
     </script>

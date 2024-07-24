@@ -7,7 +7,8 @@
     </title>
 </head>
 <link rel="stylesheet" href="./style.css">
-
+<script src="./functions.js"></script>
+<script src="./Api.js"></script>
 <style>
 
 .Logo{
@@ -82,15 +83,15 @@
 
         <h1>Send Us A Direct Message</h1>
 
-        <input type="text" placeholder="Enter Your Name">
+        <input type="text" id="UserName" placeholder="Enter Your Name">
 
-        <input type="email" placeholder="Enter Your Email">
+        <input type="email" id="UserEmail" placeholder="Enter Your Email">
 
-        <input type="text" placeholder="Enter Your Subject">
+        <input type="text" id="UserSubject" placeholder="Enter Your Subject">
 
-        <textarea placeholder="Compose Your Message"></textarea>
+        <textarea id="UserBody" placeholder="Compose Your Message"></textarea>
 
-        <button style="background: forestgreen;">Send</button>
+        <button style="background: forestgreen;" id="SendButton" onclick="SendEmail()">Send</button>
 
     </div>
         
@@ -109,6 +110,66 @@
         SocialMedia=()=>{
 
             location='./SocialMedia.html'; 
+
+        }
+
+        SendEmail=()=>{
+
+            const UserName=document.querySelector('#UserName');
+            const UserEmail=document.querySelector('#UserEmail');
+            const UserSubject=document.querySelector('#UserSubject');
+            const UserBody=document.querySelector('#UserBody');
+            const SendButton=document.querySelector('#SendButton');
+
+            if (UserName.value ) {
+                
+                if (UserEmail.value ) {
+                    
+                    if (UserSubject.value ) {
+                    
+                        if (UserBody.value ) {
+
+                            SendButton.innerHTML='Please Wait';
+
+                            const DATA={
+                                "recipientEmail":Email,
+                                "subject":UserSubject.value,
+                                "body":`Dear VINCENT WAMANGA MINISTRIES INTERNATIONAL (VWMI) \n You Have a Direct Message From ${UserName.value} and there Message is ${UserBody.value}.\n If your Interested in the Response Back to that Person Please Send Them a Email Via ${UserEmail.value}.\n Thank You For USing Compose Ventures Company Services .In Case of Any Inquires Please Respond Back to Us via This Email.\n Thank You. \n From Compose Email Team.`
+                            }
+
+                            POSTPACKAGE(EMAILAPI,'',DATA,(data)=>{
+
+                                alert('Message Sent,We shall Respond Within 24hrs');
+
+                                location.href='./ContactUs.html';
+
+                            })
+
+                        } else {
+                            
+                            alert('Enter Your Message');
+
+                        }
+
+                    } else {
+                        
+                        alert('Enter Your Subject');
+
+                    }
+
+
+                } else {
+                    
+                    alert('Enter User Email');
+
+                }
+
+
+            } else {
+                
+                alert('Enter User Name');
+
+            }
 
         }
 
