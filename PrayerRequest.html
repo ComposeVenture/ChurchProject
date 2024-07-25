@@ -7,7 +7,8 @@
     </title>
 </head>
 <link rel="stylesheet" href="./style.css">
-
+<script src="./Api.js"></script>
+<script src="./functions.js"></script>
 <style>
 
 .Logo{
@@ -82,21 +83,15 @@
 
         <h1>Lets Pray With You</h1>
 
-        <input type="text" placeholder="Enter Your Name">
+        <input type="text" id="UserName" placeholder="Enter Your Name">
 
-        <input type="email" placeholder="Enter Your Email">
+        <input type="email" id="UserEmail" placeholder="Enter Your Email">
 
-        <input type="text" placeholder="Enter Your location">
+        <input type="text" id="UserLocation" placeholder="Enter Your location">
 
-        <input type="text" placeholder="Your Contact">
+        <textarea id="UserBody" placeholder="Compose Your Message"></textarea>
 
-        <input type="text" placeholder="Your Age">
-
-        <input type="text" placeholder="Your Religion">
-
-        <textarea placeholder="Compose Your Message"></textarea>
-
-        <button onclick="SendEmail()" style="background: forestgreen;">Request</button>
+        <button onclick="SendEmail()" id="RequestButton" style="background: forestgreen;">Request</button>
 
     </div>
         
@@ -112,8 +107,9 @@
 
             const UserName=document.querySelector('#UserName');
             const UserEmail=document.querySelector('#UserEmail');
-            const UserSubject=document.querySelector('#UserSubject');
+            const UserSubject=document.querySelector('#UserLocation');
             const UserBody=document.querySelector('#UserBody');
+            const RequestButton=document.querySelector('#RequestButton');
 
             if (UserName.value ) {
                 
@@ -123,15 +119,19 @@
                     
                         if (UserBody.value ) {
 
+                            RequestButton.innerHTML='Please Wait';
+
                             const DATA={
                                 "recipientEmail":Email,
-                                "Subject":UserSubject.value,
-                                "body":`Dear VINCENT WAMANGA MINISTRIES INTERNATIONAL (VWMI) \n You Have a Direct Message From ${UserName.value} and there Message is ${UserBody.value}.\n If your Interested in the Response Back to that Person Please Send Them a Email Via ${UserEmail.value}.\n Thank You For USing Compose Ventures Company Services .In Case of Any Inquires Please Respond Back to Us via This Email.\n Thank You. \n From Compose Email Team.`
+                                "Subject":"Prayer Request",
+                                "body":`Dear VINCENT WAMANGA MINISTRIES INTERNATIONAL (VWMI) \n\n You Have a Prayer Request Message \n\n From ${UserName.value}\n\n Message: ${UserBody.value}.\n\n Country :${UserSubject.value}\n\n If your Interested in the Response Back to that Person Please Send Them a Email Via ${UserEmail.value}.\n Thank You For USing Compose Ventures Company Services .In Case of Any Inquires Please Respond Back to Us via This Email.\n Thank You. \n From Compose Email Team.`
                             }
 
                             POSTPACKAGE(EMAILAPI,'',DATA,(data)=>{
 
-                                console.log(data)
+                                alert('Prayer Request Sent,We shall Respond Within 24hrs');
+
+                                location.href='./PrayerRequest.html';
 
                             })
 
@@ -143,7 +143,7 @@
 
                     } else {
                         
-                        alert('Enter Your Subject');
+                        alert('Enter Your Location');
 
                     }
 
