@@ -7,6 +7,8 @@
     </title>
 </head>
 <link rel="stylesheet" href="./style.css">
+<script src="./Api.js"></script>
+<script src="./functions.js"></script>
 
 <style>
 
@@ -300,6 +302,40 @@
         ParthnerUS=()=>{
             location='./ParthnerShip.html';
         }
+
+        const Test=()=>{
+
+            const DATA2={
+                "sheetName":"Testimonies"
+            }
+
+            POSTPACKAGE(GETDATA,'',DATA2,(data)=>{
+
+                JSONIFICATION(data,(stor)=>{
+
+                    STORE('local','TestStories',stor);
+
+                });
+
+            });
+
+            const DATA3={
+                "sheetName":"ThanksGiving"
+            }
+
+            POSTPACKAGE(GETDATA,'',DATA3,(data)=>{
+
+                JSONIFICATION(data,(stor)=>{
+
+                    STORE('local','ThanksGiving',stor);
+
+                });
+
+            });
+
+        }
+
+        Test();
 
     </script>
 

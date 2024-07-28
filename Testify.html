@@ -7,6 +7,8 @@
     </title>
 </head>
 <link rel="stylesheet" href="./style.css">
+<script src="./functions.js"></script>
+<script src="./Api.js"></script>
 
 <style>
 
@@ -83,17 +85,15 @@
 
         <h1>Testify The Works Of the Lord</h1>
 
-        <input type="text" placeholder="Enter Your Name">
+        <input type="text" id="UserName" placeholder="Enter Your Name">
 
-        <input type="email" placeholder="Enter Your Email">
+        <input type="email" id="UserEmail" placeholder="Enter Your Email">
 
-        <input type="text" placeholder="Enter Your location">
+        <input type="text" id="UserLocation" placeholder="Enter Your location">
 
-        <input type="text" placeholder="Your Contact">
+        <textarea id="UserStory" placeholder="Tell Us Your Testimony "></textarea>
 
-        <textarea placeholder="Tell Us Your Testimony "></textarea>
-
-        <button style="background: forestgreen;">Share Now</button>
+        <button style="background: forestgreen;" id="ShareNowButton" onclick="ShareNow()">Share Now</button>
 
         <p>
             By completing and remitting the information contained in the testimony form, you authorize and grant permission to Vincent Wamanga ministries international to use this testimony, all or in part in print, online, digital media on any website owned or operated by Vincent Wamanga ministries international: including social media websites and or televised broadcasts. You certify that you are providing this information to Vincent Wamanga ministries international and universal church of God For all Nations MBALE (UCOGAN) of your own volition without any means of persuasion, influence, or coercion from ministry staff. You believe that you have experienced divine intervention from God through this ministry and any testimony or statement you make, and information you provide on the testimony or thanks thankgiving form is accurate and truthful to the best of your knowledge and understanding. Furthermore, you may have, any right of privacy that you have, and release Vincent Wamanga ministries international from any liability they may have in making use of this information.
@@ -107,6 +107,84 @@
 
         Home=()=>{
             location='./SocialMedia.html';
+        }
+
+        ShareNow=()=>{
+
+            const UserName=document.querySelector('#UserName');
+            const UserEmail=document.querySelector('#UserEmail');
+            const UserLocation=document.querySelector('#UserLocation');
+            const UserStory=document.querySelector('#UserStory');
+
+            if (UserName.value) {
+                
+                if (UserEmail.value) {
+
+                    if (UserLocation.value) {
+
+                        if (UserStory.value) {
+
+                            const ShareNowButton=document.querySelector('#ShareNowButton');
+
+                            const DATA={
+                                "sheetName":"Testimonies",
+                                "UserName":UserName.value,
+                                "UserLocation":UserLocation.value,
+                                "UserEmail":UserEmail.value,
+                                "UserStory":UserStory.value,
+                                "Time":new Date()
+                            }
+
+                            ShareNowButton.innerHTML='Please Wait'
+
+                            POSTPACKAGE(POSTAPI,'',DATA,(Data)=>{
+
+                                const DATA2={
+                                    "sheetName":"Testimonies"
+                                }
+
+                                POSTPACKAGE(GETDATA,'',DATA2,(data)=>{
+
+                                    JSONIFICATION(data,(stor)=>{
+
+                                        STORE('local','TestStories',stor);
+
+                                        location='./TestStories.html';
+
+                                    });
+
+                                });
+                                
+                            })
+                                                        
+                        } else {
+                            
+                            alert('Enter Your Testimony');
+
+                        }
+                                        
+                                    
+                    } else {
+                        
+                        alert('Enter User Location');
+
+                        
+
+                    }
+                
+                } else {
+                    
+                    alert('Enter User Email');
+
+                }
+
+            } else {
+                
+                alert('Enter User Name');
+
+            }
+
+
         }
 
     </script>

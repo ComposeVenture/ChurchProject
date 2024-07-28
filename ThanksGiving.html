@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VINCENT WAMANGA MINISTRIES INTERNATIONAL (VWMI)
+    </title>
+</head>
+<link rel="stylesheet" href="./style.css">
+<script src="./functions.js"></script>
+<script src="./Api.js"></script>
+
+<style>
+
+.Logo{
+    position: relative;
+    align-items: center;
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+}
+
+.HomeHeader{
+    height: 100px;
+    display: block;
+}
+
+.Names{
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 30px;
+    color: white;
+}
+
+.AppName{
+    position: relative;
+    font-size: 16px;
+    text-align: center;
+    color: white;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.HomeSubHeader{
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    background: transparent;
+    display: inline-flex;
+    bottom: 0;
+    overflow-x: auto;
+}
+
+.holder{
+    position: absolute;
+    width:100% ;
+    height: auto;
+    top: 100px;
+    bottom: 0;
+    background: mediumorchid;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.testDiver{
+    position: relative;
+    width: 95%;
+    left: 2%;
+    background-color: transparent;
+    box-shadow: 1px 1px 10px 1px #00000080;
+    height: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+}
+
+.TitleName{
+    font-size: 16px;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+.Story{
+    position: relative;
+    width: 95%;
+    left: 2%;
+    height: 80%;
+    background: transparent;
+    border: 1px solid #00000010;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.Time{
+    font-size: 15px;
+    margin-left: 1rem;
+    text-align: left;
+}
+
+.Location{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: black;
+    background: white;
+    border-radius: 20px 0px 5px 0px;
+}
+
+</style>
+<body>
+
+    <header class="HomeHeader" >
+
+        <h1 class='AppName'>VINCENT WAMANGA MINISTRIES INTERNATIONAL (VWMI)</h1>
+    
+        <div class="HomeSubHeader">
+
+            <p onclick='Home()' class='Sections'>Home</p>
+
+            <p onclick='ThanksGiving()' class='Sections'>Write Your ThanksGiving</p>
+        
+        </div>
+
+    </header>
+
+    <div id="TestDiv" class="holder"></div>
+        
+</body>
+
+    <script>
+
+        ThanksGiving=()=>{
+            location='./ReportGiving.html'; 
+        }
+
+        Home=()=>{
+            location='./Events.html';
+        }
+
+       const TestStories=()=>{
+
+        const DATA2={
+            "sheetName":"Testimonies"
+        }
+
+        POSTPACKAGE(GETDATA,'',DATA2,(data)=>{
+
+            JSONIFICATION(data,(stor)=>{
+
+                STORE('local','ThanksGiving',stor);
+
+            });
+
+        });
+
+        const TestDiv=document.querySelector('#TestDiv');
+
+        DEJSON('local','ThanksGiving',(data)=>{
+
+            REDUX(data.reverse(),(stories)=>{
+
+                const testDiver=document.createElement('div');
+
+                testDiver.classList.add('testDiver');
+
+                TIMER(stories.Time,(timed)=>{
+
+                    testDiver.innerHTML=`
+
+                    <h1 class='TitleName'>Thanks Giving By ${stories.UserName}</h1>
+
+                    <div class='Story'>${stories.UserStory}</div>
+
+                    <h1 class='Time'>Testified On: ${timed} </h1>
+
+                    <p class='Location'>${stories.UserLocation||'Annoymous'}</p>
+
+                    `;
+
+                    ADD(TestDiv,testDiver);
+
+                });
+
+            })
+    
+        })
+    
+        }  
+
+        TestStories();
+        
+    </script>
+
+</html>
