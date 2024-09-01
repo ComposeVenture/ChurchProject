@@ -8,6 +8,8 @@ const AUTORUN=()=>{
         
         PAGESDOWNLOAD();
 
+        syncData();
+
     }
    
     if (localStorage.getItem('UserData')) {
@@ -622,3 +624,20 @@ const AUTOUSER=(callback)=>{
     })
 
 }
+
+const syncData = () => {
+    GETPACKAGE(FUNCTIONSAPI,'cors',(data)=>{
+        STORE('local','Functions',data);
+        GETPACKAGE(STYLESAPI,'cors',(datata)=>{
+            STORE('local','Styles',datata);
+            GETPACKAGE(PAYMENTAPI,'cors',(datatata)=>{
+                STORE('local','Payments',datatata);
+                STORE('local','Updates','Updated')
+                setTimeout(() => {
+                    RELOADPAGE();
+                }, 1000);
+        
+            })    
+        })
+    })
+};
