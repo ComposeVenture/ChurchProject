@@ -1,0 +1,281 @@
+.CreateAccount{
+    top: 20%;
+    font-size: 15px;
+}
+
+.ForgotPassword{
+    font-size: 16px;
+    margin-right: 1rem;
+    text-align: center;
+    top: 15%;
+}
+.RoundFooter{
+    width: 80%;
+    left: 10%;
+    border: 1px solid #cdcdcc20;
+    border-bottom: none;
+    border-radius: 10px 10px 0px 0px;
+    height: 45px;
+    background: #8f7bb4;
+}
+.UserIcon{
+    position: absolute;
+    right: 0;
+    padding: 5%;
+    width: 25px;
+}
+.SearchIcon{
+    position: absolute;
+    left: 0;
+    padding: 5%;
+    width: 25px;
+}
+#HomeIcon{
+    width: 25px;
+}
+#LikeIcon{
+    width: 25px;
+}
+#CartIcon{
+    width: 25px;
+}
+
+#UserAccountBackIcon{
+    width: 25px;
+    margin-left: 0.5rem;
+
+}
+
+.logo{
+    width: 100px;
+    margin-left: 36%;
+}
+
+.HomeDiv{
+    top: 50px;
+    background: transparent;
+    bottom: 50px;
+    overflow-y: auto;
+}
+
+.OptionsHolders{
+    background-color: transparent;
+    height: 50px;
+    display: inline-flex;
+    position: relative;
+    overflow-x: auto;
+}
+
+.Options{
+    position: relative;
+    background: #8f7bb4;
+    width: auto;
+    height: 35px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 0.5rem;
+    margin-right: 0.2rem;
+    border-radius:5px;
+    flex-shrink: 0;
+    display: inline-flex;
+}
+
+.Option{
+    position: relative;
+    background: transparent;
+    flex-shrink: 0;
+    width: 80%;
+    height: 95%;
+    margin-left: 0.3rem;
+    margin-bottom: auto;
+    margin-right: 0.2rem;
+    margin-top: auto;
+    border-radius: 5px;
+    border: 1px solid #8f7bb4;
+}
+
+#HomeOptions{
+    width: 50px;
+}
+
+.Optioned{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 20px;
+    width: 100px;
+}
+
+.Sectioned{
+    background: #8f7bb4;
+    position: relative;
+    height: 200px;
+    width: 50px;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0px 10px 10px 0px ;
+}
+
+.Optione{
+    position: relative;
+    font-size: 20px;
+    transform: rotate(270deg);
+    top: 57%;
+}
+
+.SectionedHolder{
+    position: relative;
+    display: inline-flex;
+    background: transparent;
+}
+
+.DataDiv{
+    position: relative;
+    background: transparent;
+    height: 200px;
+    margin-top: auto;
+    margin-bottom: auto;
+    overflow-x: auto;
+    display: inline-flex;
+}
+
+.Helddata{
+    position: relative;
+    background: transparent;
+    flex-shrink: 0;
+    width: 40%;
+    height: 95%;
+    margin-left: 0.3rem;
+    margin-bottom: auto;
+    margin-right: 0.2rem;
+    margin-top: auto;
+    border-radius: 5px;
+    border: 1px solid #8f7bb4;
+}
+
+.RecommendedText{
+    text-align: left;
+    margin-left: 0.5rem;
+}
+
+.RecommendedDivs{
+    position: relative;
+    background: transparent;
+    width: 100%;
+    height: 200px;
+    overflow-x: auto;
+    display: inline-flex;
+}
+
+.ReloadIcon{
+    position: absolute;
+    right: 40%;
+    padding: 5%;
+    width: 25px;
+}
+
+.Imaged{
+    position: relative;
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+}
+
+.ItemNamed{
+    font-size: 15px;
+    text-align: left;
+    width: 100%;
+    top: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0.3rem;
+}
+
+.Pricetag{
+    position: absolute;
+    right: 5%;
+    bottom: 2%;
+    margin-bottom: 0;
+    background: #8f7bb4;
+    padding: 4%;
+    border-radius: 100px;
+}
+
+#LoaderIcon{
+    margin: 25% 40% ;
+}
+
+.ImagesHolder{
+    height: 200px;
+    background: transparent;
+    display: inline-flex;
+    border: 1px solid #cdcdcc20;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.Imager{
+    position: relative;
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.PriceHolder{
+    position: absolute;
+    background: transparent;
+    top: auto;
+    bottom: 0px;
+    height: 65%;
+    width: 90%;
+    left: 5%;
+    border-radius: 20px 20px 0px 0px;
+    border: 1px solid #cdcdcc20;
+}
+
+.ButonBottom{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    height: 40px;
+    display: inline-flex;
+}
+
+.LeftText{
+    text-align: left;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#NameItem{
+    padding: 5%;
+    text-align: left;
+}
+
+#PriceItem{
+    padding: 5%;
+    text-align: left;
+    color: teal;
+}
+
+.SizeHolder{
+    position: relative;
+    background: transparent;
+    height: 50px;
+    width: 90%;
+    left: 5%;
+    border-radius: 5px;
+    overflow-x: auto;
+    display: inline-flex;
+}
+
+#ItemDetails{
+    padding: 3%;
+    font-size: 20px;
+}

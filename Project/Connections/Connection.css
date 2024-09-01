@@ -1,0 +1,150 @@
+.HomeDivHolder{
+    top: 50px;
+    bottom: 0px;
+    overflow-y: auto;
+}
+
+.LeftedIcon{
+    margin-left: 0.5rem;
+}
+
+.RightedIcon{
+    margin-right: 0.5rem;
+}
+
+.AppName{
+    margin-right: 7rem;
+    text-align: left;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#Loader{
+    margin:75% 45%;
+}
+
+.ContactsHolder{
+    top: 0;
+    position: relative;
+    background: transparent;
+    border-bottom: 1px solid #cdcdcd20;
+    width: 98%;
+    left: 1%;
+    height: 50px;
+    margin-top: 0.2rem;
+    margin-top: 0.5rem;
+    display: inline-flex;
+}
+
+#UserImage{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    margin-left: 0.5rem;
+}
+
+.ContactsName{
+    margin-top: auto;
+    margin-bottom: 5rem;
+    font-size: 15px;
+    margin-left: 4rem;  
+}
+
+.FirstNumber{
+    position: absolute;
+    margin-top: 1.4rem;
+    text-align: left;
+    top: auto;
+    left: 23%;
+    bottom: auto;
+    font-size: 15px;
+    color :#b4a4a4
+}
+
+.FixedButton{
+    position: absolute;
+    top: auto;
+    bottom: 50px;
+    background: forestgreen;
+    right: 2%;
+    width: 50px;
+    left: auto;
+    border-radius: 50px;
+    display: inline-flex;
+}
+
+.BackEmailVerification{
+    position: absolute;
+    top: 2.5%;
+    left: 2%;
+    padding: 2%;
+    width: 23px;
+}
+
+.CreateUserImage{
+    width: 120px;
+    height: 120px;
+    border-radius: 100px;
+    margin: auto;
+
+}
+
+#SaveNumberButton{
+    display: inline-flex;
+}
+
+.SaveName{
+    margin-top: auto;
+    margin-left: 1rcap;
+    margin-right: auto;
+    margin-bottom: auto;
+    font-size: 16px;
+}
+
+.SaveImage{
+    margin-right: 1rem;
+}
+
+.ImageHolderCreation{
+    position: relative;
+    background: transparent;
+    display: inline-flex;
+    overflow: hidden;
+}
+
+.MenuDiv{
+    width: 50%;
+    display: none;
+    border-right: 1px solid #cdcdcd20;
+}
+
+.MenuOptions{
+    top: 55px;
+    overflow-y: auto;
+}
+
+.ContactUserName{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 1rem;
+}
+
+.Details{
+    position: relative;
+    left: 5%;
+    width: 90%;
+    background: transparent;
+    height: 40%;
+    border-radius: 10px;
+    border: 1px solid #cdcdcd20;
+}
+
+.UserAppName{
+    text-align: right;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: 0.5rem;
+    font-size: 20px;
+}

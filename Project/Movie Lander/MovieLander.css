@@ -1,0 +1,126 @@
+.HomeDiv{
+    background: transparent;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.RecommendedMovies{
+    position: relative;
+    height: 200px;
+    width: 95%;
+    border-radius: 10px;
+    left: 2%;
+    margin-top: 0.5rem;
+}
+
+.RecommendedNames{
+    text-align: left;
+    margin-left: 0.8rem;
+    font-size: 16px;
+    margin-bottom: 0.5rem;
+    color: teal;
+}
+
+.RecommendedDiv{
+    position: relative;
+    height: 200px;
+    width: 95%;
+    border-radius: 10px;
+    left: 2%;
+    margin-top: 0.5rem;
+    display: inline-flex;
+    top: auto;
+}
+
+.RightText{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: 1rem;
+    font-size: 18px;
+}
+
+.MyProfileHolder{
+    position: relative;
+    height: 200px;
+    top: 52px;
+    display: inline-flex;
+}
+
+.ProfilePhotoHolder{
+    position: relative;
+    height: 90%;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: auto;
+    margin-left: auto;
+    background: transparent;
+    width: 150px;
+    border-radius: 20px;
+    display: inline-flex;
+}
+
+.UserDetailsHolder{
+    position: relative;
+    height: 90%;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 0.5rem;
+    margin-left: auto;
+    background: blueviolet;
+    width: 180px;
+    border-radius: 10px;
+}
+
+.ProfilePhoto{
+    width: 100px;
+}
+
+.WhiteUpdateIcon{
+    position: relative;
+}
+
+.SectionHodlers{
+    top: auto;
+    height: 60%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.Button{
+    display: inline-flex;
+    background: forestgreen;
+}
+
+.Title{
+    margin-top: auto;
+    margin-left:0.2rem;
+    margin-right: auto;
+    margin-bottom: auto;
+    font-size: 18px;
+}
+
+.DirectionalIcon{
+    margin-right: 0.5rem;
+    transform: rotate(180deg);
+}
+
+#DeleteAccount{
+    background: brown;
+}
+
+.DataHolders{
+    top: 52px;
+    overflow-y: auto;
+}
+
+.UploadPhotoHolder{
+    width: 30px;
+    right: 10px;
+    height: 30px;
+    top: auto;
+    bottom: 5px;
+    background: teal;
+    border-radius: 50px;
+    display: inline-flex;
+}

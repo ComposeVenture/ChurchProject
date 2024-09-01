@@ -1,0 +1,8 @@
+{
+    "Name":"Connections",
+    "PacakageName":"com.composeventure.compose_contacts",
+    "Version":"01",
+    "GetLink":"https://script.google.com/macros/s/AKfycbyN997iwOJ_jFF7uVf1yAy0WZiL735zFGKCi_nfDBW_0x6uuXP5vjpwQsy49G-k5wU4/exec",
+    "FUnctionLInk":"https://composeventure.github.io/SERVER/Project/Connections/Connection.js",
+    "StylesLink":"https://composeventure.github.io/SERVER/Project/Connections/Connection.css"
+}
